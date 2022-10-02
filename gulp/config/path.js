@@ -10,11 +10,13 @@ export const path = {
         assets: `${buildFolder}/assets`,
     },
     src: {
-        html: `${srcFolder}/*.html`,
+        // html: `${srcFolder}/*.html`,
+        html: `${srcFolder}/*.pug`,
         assets: `${srcFolder}/assets/**/*.*`,
     },
     watch: {
-        html: `${srcFolder}/**/*.html`,
+        // html: `${srcFolder}/**/*.html`,
+        html: `${srcFolder}/**/*.pug`,
         assets: `${srcFolder}/assets/**/*.*`,
     },
     clean: buildFolder,
