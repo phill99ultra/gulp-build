@@ -1,4 +1,3 @@
-import fileInclude from "gulp-file-include";
 import webHtmlNoSvg from "gulp-webp-html-nosvg";
 import versionNumber from "gulp-version-number";
 import pug from "gulp-pug";
@@ -11,7 +10,6 @@ export const html = () => {
                 message: "Error: <%= error.message %>"
             })
         ))
-        // .pipe(fileInclude())
         .pipe(pug({
             pretty: true,
             verbose: true

@@ -9,6 +9,7 @@ import { copy } from './gulp/tasks/copy.js';
 import { clean } from './gulp/tasks/clean.js';
 import { html } from './gulp/tasks/html.js';
 import { server } from './gulp/tasks/server.js';
+import { scss } from './gulp/tasks/style.js';
 
 // passing values ​​to global variable
 global.app = {
@@ -21,9 +22,10 @@ global.app = {
 function watch() {
     gulp.watch(path.watch.assets, copy);
     gulp.watch(path.watch.html, html);
+    gulp.watch(path.watch.scss, scss);
 }
 
-const mainTasks = gulp.parallel(copy, html);
+const mainTasks = gulp.parallel(copy, html, scss);
 const runInBrowserTasks = gulp.parallel(watch, server);
 
 // building a task execution script
