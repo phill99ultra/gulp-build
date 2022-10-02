@@ -8,6 +8,7 @@ import { plugins } from './gulp/config/plugins.js';
 import { copy } from './gulp/tasks/copy.js';
 import { clean } from './gulp/tasks/clean.js';
 import { html } from './gulp/tasks/html.js';
+import { server } from './gulp/tasks/server.js';
 
 // passing values ​​to global variable
 global.app = {
@@ -23,9 +24,10 @@ function watch() {
 }
 
 const mainTasks = gulp.parallel(copy, html);
+const runInBrowserTasks = gulp.parallel(watch, server);
 
 // building a task execution script
-const dev = gulp.series(clean, mainTasks, watch);
+const dev = gulp.series(clean, mainTasks, runInBrowserTasks);
 
 // default script execution 
 gulp.task('default', dev);
