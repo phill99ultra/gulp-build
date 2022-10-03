@@ -1,0 +1,70 @@
+footer {
+  box-shadow: 0px -10px 40px rgba(0, 0, 0, 0.05);
+  padding: 24px 0 24px 0;
+  color: $color_Footer;
+  .phone {
+    text-align: end;
+    span {
+      @include text-link;
+    }
+    .contact {
+      margin: 8px 0 0 0;
+      text-decoration: none;
+      .icon-phone {
+        width: 24px;
+        height: 24px;
+        display: block;
+        background-size: cover;
+        margin: 0 8px 0 0;
+        background: url("../assets/images/svgicons/phone-footer.svg") center
+          center no-repeat;
+      }
+      span {
+        color: $color_Blue;
+        @include text-link;
+      }
+    }
+  }
+  .pages {
+    margin: 20px 0 18px 0;
+    .page-link {
+      margin: 0 16px 0 0;
+    }
+  }
+  .images {
+    margin: 20px 0 0 0;
+    span {
+      width: 1px;
+      height: 24px;
+      background-color: rgba(239, 239, 239, 1);
+      margin: 0 15px 0 15px;
+    }
+    .social:not(:last-child) {
+      margin: 0 20px 0 0;
+    }
+  }
+  .text-start {
+    font-size: 12px;
+    margin: 16px 0 0 0;
+    line-height: 14px;
+  }
+  .text-end {
+    font-size: 14px;
+    line-height: 18px;
+  }
+}
+
+@media (max-width: $sm-min) {
+  footer {
+    .pages {
+      .page-link {
+        margin: 0 0 8px 0;
+      }
+    }
+    .text-start {
+      margin: 25px 0 0 0;
+      padding: 24px 0 24px 0;
+      border-top: 1px solid #e6e6e6;
+    }
+  }
+}
