@@ -1,0 +1,16 @@
+@font-face {
+  font-family: "OnestRegular";
+  src: url("../assets/fonts/OnestRegular.ttf");
+  font-style: normal;
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "OnestBold";
+  src: url("../assets/fonts/OnestBold.ttf");
+  font-style: normal;
+  font-weight: 700;
+}
+
+$font_regular: "OnestRegular", sans-serif;
+$font_bold: "OnestBold", sans-serif;

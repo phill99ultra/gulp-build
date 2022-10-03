@@ -1,0 +1,30 @@
+@mixin text-regular {
+  font-size: 14px;
+  line-height: 16px;
+}
+
+@mixin text-link {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+@mixin text-title-h1 {
+  font-size: 64px;
+  line-height: 72px;
+}
+
+@mixin text-title-h1-mobile {
+  font-size: 40px;
+  line-height: 48px;
+}
+
+@mixin text-regular-18 {
+  font-size: 18px;
+  line-height: 24px;
+}
+
+@mixin btn-outlined {
+  outline: 0;
+  border: 0;
+  border-radius: 8px;
+}

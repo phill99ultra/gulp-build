@@ -1,3 +1,32 @@
 header 
-    | This is header
-    img(src='@img/cover.png' alt='')
+    .navbar-top.d-none.d-sm-block
+        .container-xxl.d-flex.align-items-center.justify-content-between
+            a.logo.text-white.d-flex.align-items-center.flex-no-wrap.nav-link(target='_blank' href='https://gov.md')
+                img.me-2(src='@img/svgicons/logo.svg' alt='Guvernul Republicii Moldova' width='21')
+                span Guvernul Republicii Moldova
+            ul.d-inline-flex.ml-auto
+                li.nav-item.me-5
+                    .dropdown
+                        button#dropdownLang.btn.btn-secondary.dropdown-toggle(type='button' data-bs-toggle='dropdown' aria-expanded='false')
+                            i.icon-logo.me-2
+                            span.me-2  Română 
+                        ul.dropdown-menu(aria-labelledby='dropdownLang')
+                            li
+                                a.dropdown-item(href='#') Русский
+                            li
+                                a.dropdown-item(href='#') English
+                li.nav-item.d-flex.align-items-center
+                    a.nav-link.d-flex(href='#') 
+                        i.icon-login.me-2
+                        |  Autentificare
+    nav.navbar.navbar-expand-lg.navbar-light
+        .container-xxl
+            a.navbar-brand(href='#')
+                img.img-fluid(src='@img/svgicons/logo-big.svg' alt='Guvernul Republicii Moldova')
+            button.navbar-toggler(type='button' data-bs-toggle='collapse' data-bs-target='#navbarNavAltMarkup' aria-controls='navbarNavAltMarkup' aria-expanded='false' aria-label='Toggle navigation')
+                span.navbar-toggler-icon
+            #navbarNavAltMarkup.collapse.navbar-collapse
+                .navbar-nav
+                    a.nav-link.me-2(href='#') Как подать заявку?
+                    a.nav-link.me-2(href='#') Частые вопросы
+                    a.nav-link(href='#') Контакты

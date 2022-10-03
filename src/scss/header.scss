@@ -1,0 +1,74 @@
+header {
+  .navbar-top {
+    padding: 5px 0;
+    color: $color_White;
+    background-color: $color_Blue;
+    .logo {
+      span {
+        font-size: 10px;
+        line-height: 13px;
+      }
+    }
+    .nav-item {
+      @include text-regular;
+      .dropdown {
+        #dropdownLang {
+          display: flex;
+          align-items: center;
+          @include text-regular;
+          background-color: $color_Blue;
+          outline: 0;
+          border: 0;
+          .icon-logo {
+            background: url("../assets/images/svgicons/language.svg") center
+              center no-repeat;
+            width: 14px;
+            height: 14px;
+            background-size: cover;
+            display: block;
+          }
+        }
+      }
+      .icon-login {
+        background: url("../assets/images/svgicons/login.svg") center center
+          no-repeat;
+        width: 16px;
+        height: 16px;
+        background-size: cover;
+        display: block;
+      }
+    }
+  }
+  nav {
+    box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.05);
+    .navbar-collapse {
+      flex-grow: 0;
+      .navbar-nav {
+        .nav-link {
+          color: $color_Blue;
+          @include text-link;
+        }
+      }
+    }
+    .navbar-toggler {
+      outline: 0;
+      border: 0;
+      .navbar-toggler-icon {
+        width: 19px;
+        height: 15px;
+        background-size: cover;
+        display: block;
+        background: url("../assets/images/svgicons/toggler.svg") center center
+          no-repeat;
+      }
+    }
+  }
+}
+
+@media (max-width: $xs-max) {
+  .navbar-brand {
+    img {
+      max-height: 30px;
+    }
+  }
+}
