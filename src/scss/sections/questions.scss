@@ -1,0 +1,91 @@
+.questions {
+  padding: 100px 0 100px 0;
+  .title {
+    @include text-title-h2;
+    margin: 0 0 64px 0;
+  }
+  .questions-wrapper {
+    .question {
+      .question-btn {
+        background-color: $color_Light_Blue;
+        &.first {
+          border-top-left-radius: 16px;
+          border-top-right-radius: 16px;
+        }
+        &.last {
+          border-bottom-left-radius: 16px;
+          border-bottom-right-radius: 16px;
+        }
+        .btn {
+          background-color: transparent;
+          color: $color_Black;
+          border: 0;
+          padding: 16px 0 16px 24px;
+          margin: 0 0 2px 0;
+          &[aria-expanded="true"] {
+            margin: 0;
+            .icon {
+              transform: rotate(90deg);
+            }
+          }
+          span {
+            @include text-regular-18;
+            font-family: $font_bold;
+            &.icon {
+              width: 32px;
+              height: 32px;
+              border-radius: 100%;
+              background-color: $color_Medium_Blue;
+              display: inline-block;
+              margin: 0 16px 0 0;
+              transform: rotate(0deg);
+              .icon-arrow {
+                background-size: cover;
+                display: block;
+                width: 10px;
+                height: 15px;
+                background: url("../assets/images/svgicons/arrow-right.svg")
+                  center center no-repeat;
+              }
+            }
+          }
+        }
+      }
+      .collapse {
+        .card-body {
+          border-radius: 0;
+          background-color: $color_Light_Blue;
+          border: 0;
+          padding: 0 0 24px 72px;
+        }
+        &.show {
+          margin: 0 0 2px 0;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: $xs-max) {
+  .questions {
+    padding: 60px 0 60px 0;
+    .title {
+      @include text-title-h2-mobile;
+      margin: 0 0 32px 0;
+    }
+    .questions-wrapper {
+      .question {
+        .question-btn {
+          .btn {
+            span {
+              @include text-link;
+            }
+          }
+        }
+        .card-body {
+          padding: 0 16px 24px 16px;
+        }
+      }
+    }
+  }
+}

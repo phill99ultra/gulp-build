@@ -16,31 +16,37 @@
 @mixin text-title-h1 {
   font-size: 64px;
   line-height: 72px;
+  font-family: $font_bold;
 }
 
 @mixin text-title-h1-mobile {
   font-size: 40px;
   line-height: 48px;
+  font-family: $font_bold;
 }
 
 @mixin text-title-h2 {
   font-size: 48px;
   line-height: 64px;
+  font-family: $font_bold;
 }
 
 @mixin text-title-h2-mobile {
   font-size: 32px;
   line-height: 40px;
+  font-family: $font_bold;
 }
 
 @mixin text-title-h3 {
   font-size: 32px;
   line-height: 42px;
+  font-family: $font_bold;
 }
 
 @mixin text-title-h3-mobile {
   font-size: 22px;
   line-height: 29px;
+  font-family: $font_bold;
 }
 
 @mixin text-regular-18 {

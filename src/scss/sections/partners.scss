@@ -1,0 +1,43 @@
+.partners {
+  padding: 120px 0 120px 0;
+  background-color: $color_Light_Blue;
+  .info {
+    .title {
+      @include text-title-h2;
+      margin: 0 0 24px 0;
+    }
+    .description {
+      @include text-regular-18;
+    }
+  }
+  .images {
+    img:not(:last-child) {
+      margin: 0 90px 0 0;
+    }
+  }
+}
+
+@media (max-width: $md-min) {
+  .partners {
+    padding: 60px 0 60px 0;
+    .images {
+      margin: 24px 0 0 0;
+      img {
+        margin: 0;
+        &:not(:last-child) {
+          margin: 0;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: $sm-min) {
+  .partners {
+    .images {
+      img {
+        max-height: 75px;
+      }
+    }
+  }
+}

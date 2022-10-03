@@ -56,7 +56,6 @@
     height: 330px;
     h2 {
       @include text-title-h2;
-      font-family: $font_bold;
       margin: 0 0 24px 0;
     }
     p {

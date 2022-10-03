@@ -2,7 +2,6 @@
   padding: 100px 0 100px 0;
   .title {
     @include text-title-h2;
-    font-family: $font_bold;
     margin: 0 0 64px 0;
   }
   .option {
@@ -13,7 +12,6 @@
       color: $color_White;
       .option-title {
         @include text-title-h3;
-        font-family: $font_bold;
         margin: 0 0 24px 0;
       }
       ul {
