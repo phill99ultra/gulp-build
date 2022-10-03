@@ -1,0 +1,89 @@
+.apply-options {
+  padding: 100px 0 100px 0;
+  .title {
+    @include text-title-h2;
+    font-family: $font_bold;
+    margin: 0 0 64px 0;
+  }
+  .option {
+    background-color: $color_Blue;
+    border-radius: 16px;
+    .option-wrapper {
+      padding: 40px 40px 0 40px;
+      color: $color_White;
+      .option-title {
+        @include text-title-h3;
+        font-family: $font_bold;
+        margin: 0 0 24px 0;
+      }
+      ul {
+        list-style: disc;
+        padding: 0 0 0 15px;
+        margin: 0 0 40px 0;
+        li {
+          @include text-regular-18;
+        }
+      }
+      button {
+        border-radius: 8px;
+        border: 0;
+        outline: 0;
+        background-color: $color_White;
+        color: $color_Blue;
+        width: 100%;
+        line-height: 48px;
+        box-shadow: 0px 5px 20px rgba(19, 115, 230, 0.25);
+      }
+    }
+    img {
+      display: block;
+      margin: -40px auto 0;
+    }
+    &.option-2 {
+      background-color: $color_Light_Blue;
+      .option-title {
+        color: $color_Black;
+      }
+      ul {
+        li {
+          color: $color_Black;
+          &::marker {
+            color: $color_Blue;
+          }
+        }
+      }
+      button {
+        color: $color_White;
+        background-color: $color_Blue;
+        box-shadow: 0px 5px 20px rgba(19, 115, 230, 0.25);
+      }
+    }
+  }
+}
+
+@media (max-width: $xs-max) {
+  .apply-options {
+    padding: 60px 0 60px 0;
+    .title {
+      @include text-title-h2-mobile;
+      margin: 0 0 32px 0;
+    }
+    .option {
+      .option-wrapper {
+        .option-title {
+          @include text-title-h3-mobile;
+          margin: 0 0 16px 0;
+        }
+        ul {
+          margin: 0 0 16px 0;
+          li {
+            @include text-link;
+          }
+        }
+      }
+      &.option-2 {
+        margin: 24px 0 0 0;
+      }
+    }
+  }
+}

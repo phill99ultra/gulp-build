@@ -1,5 +1,5 @@
 .text-video {
-  padding: 120px 0 120px 0;
+  padding: 120px 0 60px 0;
   background-color: $color_Light_Blue;
   .video {
     @include iframe-wrapper;

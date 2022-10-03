@@ -33,6 +33,16 @@
   line-height: 40px;
 }
 
+@mixin text-title-h3 {
+  font-size: 32px;
+  line-height: 42px;
+}
+
+@mixin text-title-h3-mobile {
+  font-size: 22px;
+  line-height: 29px;
+}
+
 @mixin text-regular-18 {
   font-size: 18px;
   line-height: 24px;
