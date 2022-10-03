@@ -1,0 +1,105 @@
+.text-video {
+  padding: 120px 0 120px 0;
+  background-color: $color_Light_Blue;
+  .video {
+    @include iframe-wrapper;
+    .responsive-iframe {
+      @include responsive-iframe;
+      max-width: 588px;
+      max-height: 330px;
+      border-radius: 16px;
+    }
+    .bg {
+      @include responsive-iframe;
+      display: block;
+      z-index: 5;
+      max-width: 588px;
+      max-height: 330px;
+      background-color: rgba(19, 115, 230, 0.8);
+      border-radius: 16px;
+      .circle {
+        position: absolute;
+        left: 24px;
+        bottom: 30px;
+        width: 64px;
+        height: 64px;
+        background: rgba(255, 255, 255, 0.4);
+        border-radius: 100%;
+        z-index: 6;
+        &::after {
+          display: block;
+          content: "Lorem ipsum dolor sit amet";
+          position: absolute;
+          @include text-regular-18;
+          top: 20px;
+          z-index: 15;
+          right: -250px;
+          color: $color_White;
+        }
+        .icon-play {
+          width: 20px;
+          height: 20px;
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          transform: translate(-50%, -50%);
+          background-size: cover;
+          display: block;
+          background: url("../assets/images/svgicons/play.svg") center center
+            no-repeat;
+        }
+      }
+    }
+  }
+  .description {
+    max-height: 330px;
+    height: 330px;
+    h2 {
+      @include text-title-h2;
+      font-family: $font_bold;
+      margin: 0 0 24px 0;
+    }
+    p {
+      @include text-regular-18;
+    }
+  }
+}
+
+@media (max-width: $xs-max) {
+  .text-video {
+    padding: 60px 0 60px 0;
+    margin: 0 0 16px 0;
+    .description {
+      height: auto;
+      h2 {
+        @include text-title-h2-mobile;
+      }
+      p {
+        @include text-link;
+        margin: 0 0 32px 0;
+      }
+    }
+    .video {
+      .bg {
+        .circle {
+          left: 50%;
+          top: 50%;
+          transform: translate(-50%, -50%);
+          &::after {
+            display: none;
+          }
+        }
+        .video-title {
+          @include text-link-mobile;
+          color: $color_White;
+          width: 100%;
+          position: absolute;
+          text-align: center;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, calc(50% + 40px));
+        }
+      }
+    }
+  }
+}
